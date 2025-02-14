@@ -46,7 +46,7 @@ The Post Dated Cheque App is designed to simplify cheque management in ERPNext. 
 1. **Clone or Download the App:**
 
    ```bash
-   bench get-app https://github.com/yourusername/post_dated_cheque_app
+   bench get-app https://github.com/AQIQ786/post_dated_cheque_app
    ```
 
 2. **Install the App on Your Site:**
