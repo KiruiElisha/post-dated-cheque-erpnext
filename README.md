@@ -89,7 +89,7 @@ The Post Dated Cheque App is designed to simplify cheque management in ERPNext. 
 - **Email the Report:**  
   Use the built-in email functionality to send the cheque statement report to designated recipients.
 
-  ![Cheque Statement Report Screenshot](https://github.com/AQIQ786/post_dated_cheque/blob/main/sdc.png)
+  ![Cheque Statement Report Screenshot](https://github.com/AQIQ786/post_dated_cheque/blob/main/st2.png)
 
 ---
 
