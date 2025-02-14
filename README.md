@@ -76,7 +76,7 @@ The Post Dated Cheque App is designed to simplify cheque management in ERPNext. 
 3. **Submit the Cheque:**  
    When the cheque is submitted, a corresponding Payment Entry is automatically generated.
 
-   ![Cheque Submission Screenshot](path/to/cheque_submission_image.png)
+   ![Cheque Submission Screenshot](https://github.com/AQIQ786/post_dated_cheque/blob/main/tr.png)
 
 ### Viewing Cheque Statement Reports
 
@@ -110,8 +110,6 @@ Ensure your ERPNext email settings are correctly configured to fully utilize the
 - **Statement Details:**  
   The app also provides a detailed statement report which includes cheque numbers and related details. This report can be easily shared via email.
 
-  ![Statement Detail Screenshot](path/to/statement_detail_image.png)
-
 ---
 
 ## Contributing
@@ -120,12 +118,6 @@ Contributions are welcome! If you have suggestions, improvements, or bug fixes, 
 
 ---
 
-## License
-
-This app is open-source and available under the [MIT License](LICENSE).
-
----
-
 ## Support
 
-For issues, questions, or further assistance, please open an issue on the [GitHub repository](https://github.com/yourusername/post_dated_cheque_app/issues) or contact the maintainers.
+For issues, questions, or further assistance, please open an issue on the [GitHub repository](https://aqiqsolutions.com/) or contact the maintainers.
