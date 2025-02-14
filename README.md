@@ -120,4 +120,4 @@ Contributions are welcome! If you have suggestions, improvements, or bug fixes, 
 
 ## Support
 
-For issues, questions, or further assistance, please open an issue on the [GitHub repository](https://aqiqsolutions.com/) or contact the maintainers.
+For issues, questions, or further assistance, please open an issue on the [Aqiq Solutions Limited Website](https://aqiqsolutions.com/) or contact the maintainers.
