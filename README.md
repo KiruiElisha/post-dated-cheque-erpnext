@@ -46,13 +46,13 @@ The Post Dated Cheque App is designed to simplify cheque management in ERPNext. 
 1. **Clone or Download the App:**
 
    ```bash
-   bench get-app https://github.com/KiruiElisha/post_dated_cheque_app
+   bench get-app https://github.com/KiruiElisha/post-dated-cheque-erpnext
    ```
 
 2. **Install the App on Your Site:**
 
    ```bash
-   bench --site <site-name> install-app post_dated_cheque_app
+   bench --site <site-name> install-app post_dated_cheque
    ```
 
 3. **Restart Bench:**
@@ -76,7 +76,7 @@ The Post Dated Cheque App is designed to simplify cheque management in ERPNext. 
 3. **Submit the Cheque:**  
    When the cheque is submitted, a corresponding Payment Entry is automatically generated.
 
-   ![Cheque Submission Screenshot](https://github.com/KiruiElisha/post_dated_cheque/blob/main/tr.png)
+   ![Cheque Submission Screenshot](https://github.com/KiruiElisha/post-dated-cheque-erpnext/blob/main/tr.png)
 
 ### Viewing Cheque Statement Reports
 
@@ -89,7 +89,7 @@ The Post Dated Cheque App is designed to simplify cheque management in ERPNext. 
 - **Email the Report:**  
   Use the built-in email functionality to send the cheque statement report to designated recipients.
 
-  ![Cheque Statement Report Screenshot](https://github.com/KiruiElisha/post_dated_cheque/blob/main/st2.png)
+  ![Cheque Statement Report Screenshot](https://github.com/KiruiElisha/post-dated-cheque-erpnext/blob/main/st2.png)
 
 ---
 
@@ -120,4 +120,4 @@ Contributions are welcome! If you have suggestions, improvements, or bug fixes, 
 
 ## Support
 
-For issues, questions, or further assistance, please open an issue on the [GitHub repository](https://github.com/KiruiElisha/post_dated_cheque/issues) or contact the maintainers.
+For issues, questions, or further assistance, please open an issue on the [GitHub repository](https://github.com/KiruiElisha/post-dated-cheque-erpnext/issues) or contact the maintainers.

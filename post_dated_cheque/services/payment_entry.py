@@ -1,4 +1,3 @@
-# elvisndegwa90@gmail.com
 import frappe
 
 

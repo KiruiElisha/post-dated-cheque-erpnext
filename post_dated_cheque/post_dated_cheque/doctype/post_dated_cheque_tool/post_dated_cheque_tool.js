@@ -1,6 +1,5 @@
 // Copyright (c) 2025, Azzir Group Limited and contributors
 // For license information, please see license.txt
-// elvisndegwa90@gmail.com
 
 /**
  * Sets a query filter for selecting bank accounts in the 'details' child table.
