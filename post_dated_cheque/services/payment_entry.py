@@ -49,5 +49,5 @@ def update_pt_cheque_status(self):
 
         # Update the status in the Post Dated Cheques DocType
         frappe.db.set_value(
-            "Post Dated Cheque", self.custom_post_dated_cheques, "status", status
+            "Post Dated Cheque Entry", self.custom_post_dated_cheques, "status", status
         )

@@ -1,4 +1,4 @@
-# Copyright (c) 2025, Aqiq Solutions Limited and contributors
+# Copyright (c) 2025, Azzir Group Limited and contributors
 # For license information, please see license.txt
 
 # import frappe

@@ -1,8 +1,8 @@
-// Copyright (c) 2025, Aqiq Solutions Limited and contributors
+// Copyright (c) 2025, Azzir Group Limited and contributors
 // For license information, please see license.txt
 //elvisndegwa90@gmail.com
 
-frappe.ui.form.on("Post Dated Cheque", {
+frappe.ui.form.on("Post Dated Cheque Entry", {
     /**
      * Triggered when the form is refreshed.
      * If the form is new, it sets the initial status to "Pending".

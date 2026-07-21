@@ -39,7 +39,7 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "PDR.{######}\nPDP.{######}"
+   "options": "PDR.######\nPDP.######"
   },
   {
    "fieldname": "company",
@@ -53,22 +53,19 @@
    "fieldname": "cost_center",
    "fieldtype": "Link",
    "label": "Cost Center",
-   "options": "Cost Center",
-   "reqd": 1
+   "options": "Cost Center"
   },
   {
    "fieldname": "department",
    "fieldtype": "Link",
    "label": "Department",
-   "options": "Department",
-   "reqd": 1
+   "options": "Department"
   },
   {
    "fieldname": "project",
    "fieldtype": "Link",
    "label": "Project",
-   "options": "Project",
-   "reqd": 1
+   "options": "Project"
   },
   {
    "allow_on_submit": 1,
@@ -79,7 +76,7 @@
    "in_standard_filter": 1,
    "label": "Status",
    "no_copy": 1,
-   "options": "Pending\nPayment Entry Created\nPayment Entry Submitted",
+   "options": "Pending\nPayment Entry Created\nPayment Entry Submitted\nCancelled",
    "read_only": 1
   },
   {
@@ -142,7 +139,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Post Dated Cheque",
+   "options": "Post Dated Cheque Entry",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -178,11 +175,9 @@
    "fieldname": "party_name",
    "fieldtype": "Data",
    "label": "Party Name",
-   "options": "Currency",
    "translatable": 1
   },
   {
-   "fetch_from": "company_currency.currency_name",
    "fieldname": "currency",
    "fieldtype": "Link",
    "label": "Party Currency",
@@ -217,11 +212,17 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
+ "links": [
+  {
+   "group": "Payments",
+   "link_doctype": "Payment Entry",
+   "link_fieldname": "custom_post_dated_cheques"
+  }
+ ],
  "modified": "2025-02-14 12:49:20.303793",
  "modified_by": "Administrator",
  "module": "Post Dated Cheque",
- "name": "Post Dated Cheque",
+ "name": "Post Dated Cheque Entry",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

@@ -1,4 +1,4 @@
-# Copyright (c) 2025, Aqiq Solutions Limited and contributors
+# Copyright (c) 2025, Azzir Group Limited and contributors
 # For license information, please see license.txt
 
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
@@ -11,7 +11,6 @@ import frappe
 from frappe import _, _dict
 from frappe.utils import cstr, getdate
 from datetime import datetime, date
-from six import iteritems
 
 from erpnext import get_company_currency, get_default_company
 from erpnext.accounts.doctype.accounting_dimension.accounting_dimension import (
@@ -477,7 +476,7 @@ def get_gl_entries(filters, accounting_dimensions):
 
     if filters.get("presentation_currency"):
         return convert_to_presentation_currency(
-            gl_entries, currency_map, filters.get("company")
+            gl_entries, currency_map, filters
         )
     else:
         return gl_entries
@@ -594,7 +593,7 @@ def get_data_with_opening_closing(
     data.append(totals.opening)
 
     if filters.get("group_by") != "Group by Voucher (Consolidated)":
-        for acc, acc_dict in iteritems(gle_map):
+        for acc, acc_dict in gle_map.items():
             # acc
             if acc_dict.entries:
                 # opening
@@ -822,7 +821,7 @@ def get_result_as_list(data, filters):
             )
         elif d.get("voucher_type") == "Payment Entry":
             payment_vals = frappe.db.get_value("Payment Entry", {"name": d.get("voucher_no")}, ["reference_date", "mode_of_payment", "reference_no"],as_dict=True)
-            d["ref_number"] = payment_vals.ref_no or ""
+            d["ref_number"] = payment_vals.reference_no or ""
             d["chq_ref_date"] = payment_vals.reference_date or ""
             d["mode_of_payment"] = payment_vals.mode_of_payment or ""
             d["cheque_no"] = payment_vals.reference_no or ""
@@ -978,7 +977,7 @@ def get_pd_cheque_detail(filters):
             reference_no  as pd_reference_no,
             DATE_FORMAT(reference_date,"%d/%m/%Y") as pd_reference_date, 
             base_amount as p_paid_amount
-            from `tabPost Dated Cheque`
+            from `tabPost Dated Cheque Entry`
             where docstatus=1 and status='Pending' and party_type = '{}' and party = '{}'
             order by reference_date
          """.format(

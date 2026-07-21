@@ -1,4 +1,4 @@
-# Copyright (c) 2025, Aqiq Solutions Limited and contributors
+# Copyright (c) 2025, Azzir Group Limited and contributors
 # For license information, please see license.txt
 # elvisndegwa90@gmail.com
 
@@ -33,10 +33,8 @@ class PostDatedChequeTool(Document):
             )
 
             if not existing_payment:
-                print(d.name)
-                
                 # Fetch the corresponding Post Dated Cheques document
-                pdc = frappe.get_doc("Post Dated Cheque", d.post_dated_cheques)
+                pdc = frappe.get_doc("Post Dated Cheque Entry", d.post_dated_cheques)
 
                 # Create a new Payment Entry document
                 doc = frappe.new_doc("Payment Entry")
@@ -106,30 +104,28 @@ def get_post_dated_cheques(company=None, cost_center=None, department=None, from
     Returns:
         list: A list of dictionaries containing PDC details.
     """
-    conditions = []
-
-    # Append conditions based on provided filters
+    # Build parameterised filters (avoids SQL injection from user-supplied values)
+    filters = {"docstatus": 1, "status": "Pending"}
     if company:
-        conditions.append(f"company = '{company}'")
+        filters["company"] = company
     if cost_center:
-        conditions.append(f"cost_center = '{cost_center}'")
+        filters["cost_center"] = cost_center
     if department:
-        conditions.append(f"department = '{department}'")
-    if from_date:
-        conditions.append(f"posting_date >= '{from_date}'")
-    if to_date:
-        conditions.append(f"posting_date <= '{to_date}'")
+        filters["department"] = department
+    if from_date and to_date:
+        filters["posting_date"] = ["between", [from_date, to_date]]
+    elif from_date:
+        filters["posting_date"] = [">=", from_date]
+    elif to_date:
+        filters["posting_date"] = ["<=", to_date]
 
-    # Construct the SQL condition string
-    condition_string = f" AND {' AND '.join(conditions)}" if conditions else ""
-
-    # Execute the SQL query to fetch post-dated cheques
-    data = frappe.db.sql(f"""
-        SELECT company, cost_center, department, project, mode_of_payment, posting_date,
-               payment_type, reference_no, reference_date, party_type, party, amount, 
-               name AS post_dated_cheques, company_currency, currency
-        FROM `tabPost Dated Cheque`
-        WHERE docstatus = 1 AND status = 'Pending' {condition_string}
-    """, as_dict=True)
-
-    return data
+    return frappe.get_all(
+        "Post Dated Cheque Entry",
+        filters=filters,
+        fields=[
+            "company", "cost_center", "department", "project", "mode_of_payment",
+            "posting_date", "payment_type", "reference_no", "reference_date",
+            "party_type", "party", "amount", "name as post_dated_cheques",
+            "company_currency", "currency",
+        ],
+    )

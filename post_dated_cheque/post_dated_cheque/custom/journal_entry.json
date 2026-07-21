@@ -1,0 +1,22 @@
+{
+ "custom_fields": [
+  {
+   "allow_on_submit": 0,
+   "dt": "Journal Entry",
+   "fieldname": "custom_bulk_payment_entry",
+   "fieldtype": "Link",
+   "insert_after": "cheque_date",
+   "label": "Bulk Payment Entry",
+   "module": "Post Dated Cheque",
+   "no_copy": 1,
+   "options": "Bulk Payment Entry",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Journal Entry",
+ "links": [],
+ "property_setters": [],
+ "sync_on_migrate": 1
+}

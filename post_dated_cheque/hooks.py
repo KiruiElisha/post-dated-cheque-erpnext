@@ -1,8 +1,8 @@
 app_name = "post_dated_cheque"
 app_title = "Post Dated Cheque"
-app_publisher = "Aqiq Solutions Limited"
+app_publisher = "Azzir Group Limited"
 app_description = "Frappe Post Dated cheque"
-app_email = "elvisndegwa90@gmail.com"
+app_email = "azzirgrouplimited@gmail.com"
 app_license = "mit"
 
 # Apps
@@ -243,13 +243,15 @@ user_data_fields = [
 # }
 
 fixtures = [
-    "Custom Field",
+    {
+        "dt": "Custom Field",
+        "filters": [["fieldname", "in", [
+            "custom_post_dated_cheques",
+            "custom_post_dated_cheque_reference",
+        ]]]
+    },
 	{
         "dt": "Workspace",
         "filters": [["name", "=", "Post Dated Cheque"]]
-    },
-    {
-    	"dt": "Letter Head",
-    	"filter": [["name", "=", "Default Letter Head"]]
     }
 ]

@@ -1,7 +1,7 @@
 [project]
 name = "post_dated_cheque"
 authors = [
-    { name = "Aqiq Solutions Limited", email = "elvisndegwa90@gmail.com"}
+    { name = "Azzir Group Limited", email = "azzirgrouplimited@gmail.com"}
 ]
 description = "Frappe Post Dated cheque"
 requires-python = ">=3.10"

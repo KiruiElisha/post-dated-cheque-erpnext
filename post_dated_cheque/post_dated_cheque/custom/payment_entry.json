@@ -109,7 +109,7 @@
    "name": "Payment Entry-custom_post_dated_cheques",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "Post Dated Cheque",
+   "options": "Post Dated Cheque Entry",
    "owner": "Administrator",
    "permlevel": 0,
    "placeholder": null,

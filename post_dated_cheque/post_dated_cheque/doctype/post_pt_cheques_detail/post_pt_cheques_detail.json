@@ -32,7 +32,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Post Dated Cheques",
-   "options": "Post Dated Cheque",
+   "options": "Post Dated Cheque Entry",
    "read_only": 1
   },
   {
